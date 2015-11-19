@@ -17,8 +17,10 @@
         extract($_POST);
         $user = $_POST['login'];
         $password = $_POST['pwd'];
+        $valTest = 0;
         
-        if(empty($password)) {
+        if(empty($password)) { 
+          header('Location: identError.php');
           
         }
         
@@ -27,6 +29,7 @@
         $query = sprintf("SELECT * FROM user WHERE login = '%s' AND password = '%s'",
                 mysql_real_escape_string($user),
                 mysql_real_escape_string(sha1($password)));
+        
         require("sgbdconnec.php");
         
 // Rendre la base de données aston, la base courante
@@ -41,7 +44,9 @@
         if (!$result) {
             $message = 'Requête invalide : ' . mysql_error() . "\n";
             $message .= 'Requête complète : ' . $query;
-            die($message);
+            //die($message);
+            header('Location: identError.php');
+            exit;
         }
         $row = mysql_fetch_array($result);
         if (!$row) {

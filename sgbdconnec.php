@@ -3,7 +3,7 @@
 // Requête
         $userAdminDB = 'root';
         $hote = 'localhost';
-        $passwordAdminDB = 'admin';
+        $passwordAdminDB = "admin";
         
 // test connexion
         $link = @mysql_connect($hote, $userAdminDB, $passwordAdminDB);
