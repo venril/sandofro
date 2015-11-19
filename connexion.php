@@ -49,8 +49,11 @@
 
                                     Login
                                     <input style="color:red;" type="text" name="login"> Password
-                                    <input style="color:red;" type="password" name="pwd"> Connexion
-                                    <input style="color:blue;" type="submit" value="ENVOYER" />
+                                    <input style="color:red;" type="password" name="pwd" > Connexion
+                                   
+                                  <!--  <input style="color:blue;" type="submit" value="ENVOYER" /> -->
+
+                                    <input style="color:blue;" id="ident" type="button" value="ENVOYER" />
 
                                 </form>
 
@@ -98,7 +101,7 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="js/freelancer.js"></script>
-
+        <script src="js/connect.js"> </script>
     </body>
 
 </html>

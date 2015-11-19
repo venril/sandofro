@@ -47,7 +47,7 @@
                             <div>
                                 <form action="control_connexion.php" method="POST">
                                     <ul>
-                                        <li> <strong>Erreur de d'identifiant </strong></li>
+                                        <li> <strong>Erreur d'identification </strong></li>
                                         <li>Login
                                             <input style="color:red;" type="text" name="login"></li>
                                         <li>Password

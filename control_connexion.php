@@ -27,13 +27,13 @@
         $recupUser = "administrateur";
 
         $query = sprintf("SELECT * FROM user WHERE login = '%s' AND password = '%s'",
-                mysql_real_escape_string($user),
-                mysql_real_escape_string(sha1($password)));
+                @mysql_real_escape_string($user),
+                @mysql_real_escape_string(sha1($password)));
         
         require("sgbdconnec.php");
         
 // Rendre la base de données aston, la base courante
-        $db_selected = mysql_select_db('aston', $link);
+        $db_selected = @mysql_select_db('aston', $link);
         if (!$db_selected) {
             die('Impossible de sélectionner la base de données : ' . mysql_error());
         }
@@ -44,14 +44,15 @@
         if (!$result) {
             $message = 'Requête invalide : ' . mysql_error() . "\n";
             $message .= 'Requête complète : ' . $query;
-            //die($message);
+            die($message);
             header('Location: identError.php');
-            exit;
+            
         }
         $row = mysql_fetch_array($result);
-        if (!$row) {
+        if ($row == false) {
+            
+            header('Location: identError.php');
             die("table vide");
-            header('Location: index.php');
         }
 
         $rpassword = $row['password'];
