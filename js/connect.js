@@ -4,16 +4,18 @@
  * and open the template in the editor.
  */
 $('#ident').on('click', function(){
+    var slogIn = $('#login').val();
+    var smdp = $('#mdp');
 $.ajax({
   method: "POST",
   url: "control_connexion.php",
   data: {
-      login:"toto",
-      password:"poto"             
+      login:slogIn,
+      password:smdp             
   },
-}).done(function() {
-  if(pondera == "bonobo"){
-      document.location("pageBackoffice.php");
-  };
+}).done(function(e) {
+    
+    document.location = "control_connexion.php";
+ 
 });
 });
