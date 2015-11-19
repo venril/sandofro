@@ -48,8 +48,8 @@
                                 <form action="control_connexion.php" method="POST">
 
                                     Login
-                                    <input style="color:red;" type="text" name="login"> Password
-                                    <input style="color:red;" type="password" name="pwd" > Connexion
+                                    <input style="color:red;" type="text" id="login" name="login"> Password
+                                    <input style="color:red;" type="password" id="mdp" name="pwd" > Connexion
                                    
                                   <!--  <input style="color:blue;" type="submit" value="ENVOYER" /> -->
 

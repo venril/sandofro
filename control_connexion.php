@@ -61,11 +61,12 @@
         if ($rpassword == sha1($password)) {
             if ($user == "administrateur") {
                 $_SESSION['login'] = $user;
+                echo 'ok';
                 header('Location: pageBackoffice.php');
             } else {
                 $_SESSION['login'] = $user;
 
-                header('Location: pageUtilisateur.php');
+                echo 'ok';
             }
         } else {
             
