@@ -1,19 +1,22 @@
-/* 
+/* Ajout d'article
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-$('#ident').on('click', function () {
-    var slogIn = $('#login').val();
-    var smdp = $('#mdp').val();
+$('#addNews').on('click', function () {
+    var sauteurArticle = $('#auteur').val();
+    var ddateParution = $('#dateParution').val();
+    var sarticle = $('#').val();
 
     $.ajax({
         method: "POST",
-        url: "control_connexion.php",
+        url: "control_addNews.php",
         data: {
-            login: slogIn,
-            pwd: smdp
+            auteurAdd: sauteurArticle,
+            dateAdd: sarticle,
+            articleAdd: ddateParution,
         },
+       
     }).done(function (msg) {
         
         if (msg == "parfait") {

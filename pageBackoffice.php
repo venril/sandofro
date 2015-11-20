@@ -39,12 +39,9 @@
     </head>
 
     <body id="page-top" class="index">
-
-    <body id="page-top" class="index">
         <?php
         include("headerC.php");
         ?>
-
         <!-- Header -->
         <header>
             <div class="container">
@@ -52,6 +49,32 @@
                     <div class="col-lg-12">
                         <legend> Backoffice</legend>
                         <div class="intro-text">
+                             <div class="container">
+                <div class="row">
+                    <div>
+                        <legend> Ajouter une news</legend>
+                        <div>
+
+                            <div>
+                                <form action="control_addNews.php" method="POST">
+
+                                   <input style="color:red;" type="text" id="dateAddNews" name="auteurAdd">
+                                    <input style="color:red;" type="date" id="dateAddNews" name="dateAdd"> 
+                                    <input style="color:red;" type="text" id="textAddNews" name="articleAdd" > 
+
+<!--  <input style="color:blue;" type="submit" value="ENVOYER" /> -->
+
+                                    <input style="color:blue;" id="addNews" type="button" value="AJOUTER" />
+
+                                </form>
+
+                            </div>
+                            <div>
+                                // afficher les news 
+                                
+                                
+                                
+                            </div>
 
 
                         </div>

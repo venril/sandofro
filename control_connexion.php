@@ -1,17 +1,4 @@
 
-<!DOCTYPE html>
-
-<html lang="en">
-
-    <head>
-
-        <meta charset="UTF-8">
-
-        <title>Document</title>
-
-    </head>
-
-    <body>
         <?php
         session_start();
         extract($_POST);
@@ -20,7 +7,7 @@
         $valTest = 0;
         
         if(empty($password)) { 
-          header('Location: identError.php');
+          echo "mot de passe vide";
           
         }
         
@@ -61,22 +48,15 @@
         if ($rpassword == sha1($password)) {
             if ($user == "administrateur") {
                 $_SESSION['login'] = $user;
-                echo 'ok';
-                header('Location: pageBackoffice.php');
+                echo "parfait";            
+               // header('Location: pageBackoffice.php');
+                
             } else {
                 $_SESSION['login'] = $user;
-
-                echo 'ok';
+                echo "ok";
+               // header('Location: index.php');
+                
             }
-        } else {
-            
         }
         mysql_close();
         ?>                               
-
-
-    </body>
-
-</html>
-
-

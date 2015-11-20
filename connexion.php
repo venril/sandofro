@@ -50,12 +50,13 @@
                                     Login
                                     <input style="color:red;" type="text" id="login" name="login"> Password
                                     <input style="color:red;" type="password" id="mdp" name="pwd" > Connexion
-                                   
-                                  <!--  <input style="color:blue;" type="submit" value="ENVOYER" /> -->
+
+<!--  <input style="color:blue;" type="submit" value="ENVOYER" /> -->
 
                                     <input style="color:blue;" id="ident" type="button" value="ENVOYER" />
 
                                 </form>
+                                <span id="resultatAjax"></span>
 
                             </div>
 
@@ -101,7 +102,7 @@
 
         <!-- Custom Theme JavaScript -->
         <script src="js/freelancer.js"></script>
-        <script src="js/connect.js"> </script>
+        <script src="js/connect.js"></script>
     </body>
 
 </html>
