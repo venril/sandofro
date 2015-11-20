@@ -58,7 +58,7 @@
                             <div>
                                 <form action="control_addNews.php" method="POST">
 
-                                   <input style="color:red;" type="text" id="dateAddNews" name="auteurAdd">
+                                   <input style="color:red;" type="text" id="auteurAddNews" name="auteurAdd">
                                     <input style="color:red;" type="date" id="dateAddNews" name="dateAdd"> 
                                     <input style="color:red;" type="text" id="textAddNews" name="articleAdd" > 
 
@@ -70,10 +70,8 @@
 
                             </div>
                             <div>
-                                // afficher les news 
-                                
-                                
-                                
+                                // afficher les articles
+                                    <span id="listArticle"></span>                
                             </div>
 
 
@@ -120,6 +118,8 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+    <script src="js/addArticle.js"></script>
+    <script src="js/listArticle.js"></script>
 
 </body>
 

@@ -2,14 +2,16 @@
         <?php
         session_start();
         extract($_POST);
-        $user = $_POST['login'];
-        $password = $_POST['pwd'];
         $auteur = $_POST['auteurAdd'];
         $article = $_POST['articleAdd'];
         $dateparution = $_POST['dateAdd'];
-
+        $query2 ="INSERT INTO `aston`.`article` (`id`, `auteur`, `article`, `dateparution`) VALUES (NULL, 'toto', 'ttoo est bo', '2015-11-18')";
         $recupUser = "administrateur";
-        $query = sprintf("INSERT INTO `aston`.`article` ( `id` , `auteur` ,`article`,`dateparution` )VALUES ( NULL ,'%s','%s','%s'))", mysql_real_escape_string($auteur), mysql_real_escape_string($article), mysql_real_escape_string($dateparution));
+        
+        $query = sprintf("INSERT INTO `aston`.`article` ( `id` , `auteur` ,`article`,`dateparution` ) VALUES ( NULL ,'%s','%s','%s')",
+                mysql_real_escape_string($auteur),
+                mysql_real_escape_string($article),
+                mysql_real_escape_string($dateparution));
 
         require("sgbdconnec.php");
 

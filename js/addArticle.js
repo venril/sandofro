@@ -1,20 +1,15 @@
-/* Ajout d'article
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 $('#addNews').on('click', function () {
-    var sauteurArticle = $('#auteur').val();
-    var ddateParution = $('#dateParution').val();
-    var sarticle = $('#').val();
-
+    var sauteurArticle = $('#auteurAddNews').val();
+    var ddateParution = $('#dateAddNews').val();
+    var sarticle = $('#textAddNews').val();
+    alert("date parution "+ddateParution+" article "+sarticle);
     $.ajax({
         method: "POST",
         url: "control_addNews.php",
         data: {
             auteurAdd: sauteurArticle,
-            dateAdd: sarticle,
-            articleAdd: ddateParution,
+            dateAdd: ddateParution,
+            articleAdd: sarticle,
         },
        
     }).done(function (msg) {
